@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_schedul_days",
+  "info": {
+    "displayName": "Day"
+  },
+  "options": {},
+  "attributes": {
+    "time": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "location": {
+      "type": "string"
+    }
+  }
+}

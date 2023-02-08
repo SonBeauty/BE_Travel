@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tours",
+  "info": {
+    "singularName": "tour",
+    "pluralName": "tours",
+    "displayName": "tour"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ltinerary": {
+      "type": "string"
+    },
+    "Duration": {
+      "type": "string"
+    },
+    "departureDate": {
+      "type": "string"
+    },
+    "departurePlace": {
+      "type": "string"
+    },
+    "banner": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Schedule": {
+      "displayName": "Schedule",
+      "type": "component",
+      "repeatable": false,
+      "component": "schedul.schedule"
+    }
+  }
+}

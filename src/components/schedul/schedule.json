@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_schedul_schedules",
+  "info": {
+    "displayName": "Schedule"
+  },
+  "options": {},
+  "attributes": {
+    "Day": {
+      "displayName": "Day",
+      "type": "component",
+      "repeatable": true,
+      "component": "schedul.day"
+    }
+  }
+}

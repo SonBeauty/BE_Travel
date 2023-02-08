@@ -4,7 +4,8 @@
   "info": {
     "singularName": "trip",
     "pluralName": "trips",
-    "displayName": "trip"
+    "displayName": "trip",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,14 +16,30 @@
       "type": "string"
     },
     "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "Date": {
+      "type": "date"
+    },
+    "time": {
+      "type": "string"
+    },
+    "traverlers": {
+      "type": "integer"
+    },
+    "location": {
+      "type": "string"
+    },
+    "fee": {
+      "type": "string"
     }
   }
 }

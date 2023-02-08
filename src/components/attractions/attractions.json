@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_attractions_attractions",
+  "info": {
+    "displayName": "Attractions"
+  },
+  "options": {},
+  "attributes": {
+    "location": {
+      "type": "string"
+    }
+  }
+}
