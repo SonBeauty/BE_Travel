@@ -4,7 +4,8 @@
   "info": {
     "singularName": "tour",
     "pluralName": "tours",
-    "displayName": "tour"
+    "displayName": "tour",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -24,20 +25,27 @@
       "type": "string"
     },
     "banner": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "cover":{
+      "type":"Upload"
     },
     "Schedule": {
       "displayName": "Schedule",
       "type": "component",
       "repeatable": false,
       "component": "schedul.schedule"
+    },
+    "slug": {
+      "type": "string"
     }
   }
 }
