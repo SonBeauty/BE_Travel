@@ -1,5 +1,4 @@
 module.exports = ({ env }) => ({
-  // ...
   upload: {
     config: {
       provider: "cloudinary",
@@ -14,5 +13,23 @@ module.exports = ({ env }) => ({
       },
     },
   },
-  // ...
+  email: {
+    config: {
+      provider: "strapi-provider-email-smtp",
+      providerOptions: {
+        host: `${process.env.SMTP_HOST}`, //SMTP Host
+        port: `${process.env.SMTP_PORT}`, //SMTP Port
+        secure: true,
+        username: `${process.env.FROM_EMAIL}`,
+        password: `${process.env.SMTP_PASSWORD}`,
+        rejectUnauthorized: true,
+        requireTLS: true,
+        connectionTimeout: 1,
+      },
+    },
+    settings: {
+      defaultFrom: `${process.env.FROM_EMAIL}`,
+      defaultReplyTo: `${process.env.FROM_EMAIL}`,
+    },
+  },
 });
