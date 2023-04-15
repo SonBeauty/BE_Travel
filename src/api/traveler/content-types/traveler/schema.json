@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "travelers",
+  "info": {
+    "singularName": "traveler",
+    "pluralName": "travelers",
+    "displayName": "traveler"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "coverImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
