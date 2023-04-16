@@ -28,16 +28,9 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "allowedTypes": ["images", "files", "videos", "audios"]
     },
-    "cover":{
-      "type":"Upload"
-    },
+
     "Schedule": {
       "displayName": "Schedule",
       "type": "component",
