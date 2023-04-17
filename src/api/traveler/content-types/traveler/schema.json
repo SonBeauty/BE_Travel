@@ -4,7 +4,8 @@
   "info": {
     "singularName": "traveler",
     "pluralName": "travelers",
-    "displayName": "traveler"
+    "displayName": "traveler",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,14 +13,20 @@
   "pluginOptions": {},
   "attributes": {
     "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
     }
   }
 }

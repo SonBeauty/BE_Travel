@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_content_comments",
+  "info": {
+    "displayName": "Comment"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "string"
+    }
+  }
+}
