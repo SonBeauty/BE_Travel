@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "guides",
+  "info": {
+    "singularName": "guide",
+    "pluralName": "guides",
+    "displayName": "Guide",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "languages": {
+      "type": "string"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "guide"
+    },
+    "Introduction": {
+      "type": "text"
+    },
+    "videoIntroduction": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "availabletime": {
+      "type": "component",
+      "repeatable": false,
+      "component": "day.available-time"
+    },
+    "city": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    }
+  }
+}

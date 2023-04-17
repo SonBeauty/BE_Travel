@@ -40,6 +40,16 @@
     },
     "fee": {
       "type": "string"
+    },
+    "attractions": {
+      "type": "component",
+      "repeatable": false,
+      "component": "attractions.attractions"
+    },
+    "guide": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::guide.guide"
     }
   }
 }

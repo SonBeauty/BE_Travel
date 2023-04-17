@@ -1,12 +1,23 @@
 {
   "collectionName": "components_attractions_attractions",
   "info": {
-    "displayName": "Attractions"
+    "displayName": "Attractions",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "location": {
       "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }

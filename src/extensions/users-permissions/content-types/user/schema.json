@@ -74,6 +74,12 @@
     "country": {
       "type": "string",
       "required": true
+    },
+    "guide": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::guide.guide",
+      "inversedBy": "user"
     }
   }
 }

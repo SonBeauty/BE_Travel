@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_day_available_times",
+  "info": {
+    "displayName": "AvailableTime",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Day": {
+      "type": "enumeration",
+      "enum": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "time": {
+      "type": "time"
+    }
+  }
+}
