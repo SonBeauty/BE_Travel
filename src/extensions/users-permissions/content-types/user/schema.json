@@ -81,17 +81,17 @@
       "target": "api::guide.guide",
       "inversedBy": "user"
     },
-    "like": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::blog.blog",
-      "mappedBy": "likes"
-    },
     "comments": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::comment.comment",
       "mappedBy": "user"
+    },
+    "likes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::like.like",
+      "inversedBy": "user_like"
     }
   }
 }
