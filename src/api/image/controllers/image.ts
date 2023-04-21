@@ -31,7 +31,7 @@ export default factories.createCoreController(
 
       console.log(decoded);
 
-      await strapi.plugins.upload.services.upload.upload({
+      const upload = await strapi.plugins.upload.services.upload.upload({
         data: {
           refId: decoded.id,
           ref: "plugin::users-permissions.user",
@@ -39,6 +39,8 @@ export default factories.createCoreController(
         },
         files: files,
       });
+      upload;
+      result.uploadUrl = upload[0].url;
 
       return result;
     },
