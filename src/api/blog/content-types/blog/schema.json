@@ -15,11 +15,8 @@
     "title": {
       "type": "string"
     },
-    "decription": {
-      "type": "string"
-    },
-    "CeateAt": {
-      "type": "datetime"
+    "description": {
+      "type": "text"
     },
     "Image": {
       "type": "media",

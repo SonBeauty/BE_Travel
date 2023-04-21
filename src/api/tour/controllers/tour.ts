@@ -12,12 +12,9 @@ const { createReadStream, createWriteStream } = require("fs");
 module.exports = createCoreController("api::tour.tour", ({ strapi }) => ({
   async findOne(ctx) {
     const { id } = ctx.params;
-
     const entity = await strapi.db.query("api::tour.tour").findOne({
-      where: { slug: id },
+      where: { id: id },
     });
-    const sanitizedEntity = await this.sanitizeOutput(entity, ctx);
-
-    return this.transformResponse(sanitizedEntity);
+    return entity;
   },
 }));

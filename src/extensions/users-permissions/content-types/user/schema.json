@@ -92,6 +92,20 @@
       "relation": "manyToMany",
       "target": "api::like.like",
       "inversedBy": "user_like"
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "type": {
+      "type": "string"
     }
   }
 }
