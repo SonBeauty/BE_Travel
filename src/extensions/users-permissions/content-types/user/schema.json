@@ -106,6 +106,12 @@
     },
     "type": {
       "type": "string"
+    },
+    "photos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::image.image",
+      "mappedBy": "photo"
     }
   }
 }

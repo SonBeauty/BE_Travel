@@ -6,8 +6,6 @@ import { factories } from "@strapi/strapi";
 
 export default factories.createCoreController("api::tour.tour");
 const { createCoreController } = require("@strapi/strapi").factories;
-const fs = require("fs");
-const { createReadStream, createWriteStream } = require("fs");
 
 module.exports = createCoreController("api::tour.tour", ({ strapi }) => ({
   async findOne(ctx) {
