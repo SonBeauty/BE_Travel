@@ -112,6 +112,16 @@
       "relation": "oneToMany",
       "target": "api::image.image",
       "mappedBy": "photo"
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }
