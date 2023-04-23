@@ -8,16 +8,13 @@ export default factories.createCoreController(
   "api::guide.guide",
   ({ strapi }) => ({
     async create(ctx) {
-      //   const file = ctx.request.files["file"];
-
-      console.log(ctx.request.body);
       const now = Date.now();
 
       const result = await strapi.query("api::guide.guide").create({
         data: { ...ctx.request.body, publishedAt: now },
       });
       const file = ctx.request.files["file"];
-      const { path, name, type } = file;
+      var { path, name, type } = file;
 
       const files = {
         path,
@@ -33,7 +30,45 @@ export default factories.createCoreController(
         },
         files: files,
       });
+
+      const card = ctx.request.files["card"];
+      var { path, name, type } = card;
+
+      const fileCard = {
+        path,
+        name,
+        type,
+      };
+
+      const uploadCard = await strapi.plugins.upload.services.upload.upload({
+        data: {
+          refId: result.id,
+          ref: "api::guide.guide",
+          field: "card",
+        },
+        files: fileCard,
+      });
+
+      const license = ctx.request.files["license"];
+      var { path, name, type } = license;
+
+      const fileLicense = {
+        path,
+        name,
+        type,
+      };
+
+      const uploadlicense = await strapi.plugins.upload.services.upload.upload({
+        data: {
+          refId: result.id,
+          ref: "api::guide.guide",
+          field: "card",
+        },
+        files: fileLicense,
+      });
       upload;
+      uploadCard;
+      uploadlicense;
       return result;
     },
   })
