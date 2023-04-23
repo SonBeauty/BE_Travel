@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "languages": {
-      "type": "string"
-    },
     "user": {
       "type": "relation",
       "relation": "oneToOne",
