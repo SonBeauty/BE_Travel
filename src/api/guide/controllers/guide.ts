@@ -14,17 +14,24 @@ export default factories.createCoreController(
         data: { ...ctx.request.body, publishedAt: now },
       });
       const file = ctx.request.files["file"];
-      var { path, name, type } = file;
+      console.log(file);
+      var { path, name, type, size } = file;
 
       const files = {
         path,
         name,
         type,
+        size,
       };
+
+      const refId = Number(result.id); // Attempt to convert result.id to a number
+      if (isNaN(refId)) {
+        console.error("Invalid refId:", result.id);
+      }
 
       const upload = await strapi.plugins.upload.services.upload.upload({
         data: {
-          refId: result.id,
+          refId,
           ref: "api::guide.guide",
           field: "videoIntroduction",
         },

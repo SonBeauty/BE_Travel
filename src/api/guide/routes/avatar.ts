@@ -10,5 +10,10 @@ module.exports = {
       path: "/guide/cover",
       handler: "avatar.cover",
     },
+    {
+      method: "POST",
+      path: "/guide/intro",
+      handler: "avatar.inTroduce",
+    },
   ],
 };

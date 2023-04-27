@@ -63,5 +63,31 @@ export default factories.createCoreController(
 
       ctx.send({ msg: "this is post", url: `${upload[0].url}` });
     },
+
+    async inTroduce(ctx) {
+      const file = ctx.request.files["intro"];
+      const { path, name, type } = file;
+      const decoded = jwt_decode(ctx.request.header.token);
+      const files = {
+        path,
+        name,
+        type,
+      };
+
+      console.log(decoded.id);
+
+      const upload = await strapi.plugins.upload.services.upload.upload({
+        data: {
+          refId: decoded.id,
+          ref: "plugin::users-permissions.user",
+          field: "videoIntroduction",
+        },
+        files: files,
+      });
+      upload;
+      upload[0].url;
+
+      ctx.send({ msg: "this is post", url: `${upload[0].url}` });
+    },
   })
 );
