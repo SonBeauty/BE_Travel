@@ -19,6 +19,7 @@
     "jwt-decode": "^3.1.2",
     "nodemailer": "^6.9.1",
     "pg": "8.6.0",
+    "strapi-google-auth": "^0.1.2",
     "strapi-provider-email-smtp": "^1.0.3"
   },
   "author": {
