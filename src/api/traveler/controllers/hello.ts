@@ -13,9 +13,7 @@ export default factories.createCoreController(
     },
 
     async avatar(ctx) {
-      console.log(ctx.request.header.token);
-      const decoded = jwt_decode(ctx.request.header.token);
-      console.log(decoded);
+      const { id } = ctx.request.body;
       const file = ctx.request.files["file"];
       const { path, name, type } = file;
 
@@ -27,7 +25,7 @@ export default factories.createCoreController(
 
       const upload = await strapi.plugins.upload.services.upload.upload({
         data: {
-          refId: decoded.id,
+          refId: id,
           ref: "plugin::users-permissions.user",
           field: "avatar",
         },
@@ -40,9 +38,7 @@ export default factories.createCoreController(
     },
 
     async cover(ctx) {
-      console.log(ctx.request.header.token);
-      const decoded = jwt_decode(ctx.request.header.token);
-      console.log(decoded);
+      const { id } = ctx.request.body;
       const file = ctx.request.files["file"];
       const { path, name, type } = file;
 
@@ -54,7 +50,7 @@ export default factories.createCoreController(
 
       const upload = await strapi.plugins.upload.services.upload.upload({
         data: {
-          refId: decoded.id,
+          refId: id,
           ref: "plugin::users-permissions.user",
           field: "cover",
         },

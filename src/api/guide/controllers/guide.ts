@@ -14,7 +14,6 @@ export default factories.createCoreController(
         data: { ...ctx.request.body, publishedAt: now },
       });
       const file = ctx.request.files["file"];
-      console.log(file);
       var { path, name, type, size } = file;
 
       const files = {
