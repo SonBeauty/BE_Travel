@@ -133,6 +133,12 @@
       ],
       "type": "media",
       "multiple": false
+    },
+    "journeys": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::journey.journey",
+      "mappedBy": "users_permissions_user"
     }
   }
 }
