@@ -25,6 +25,12 @@
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "comments"
+    },
+    "guide": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::guide.guide",
+      "inversedBy": "comments"
     }
   }
 }

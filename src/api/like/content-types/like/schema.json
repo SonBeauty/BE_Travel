@@ -23,6 +23,12 @@
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
       "mappedBy": "likes"
+    },
+    "journey": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::journey.journey",
+      "inversedBy": "likes"
     }
   }
 }
