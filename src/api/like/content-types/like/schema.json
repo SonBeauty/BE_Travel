@@ -29,6 +29,12 @@
       "relation": "manyToOne",
       "target": "api::journey.journey",
       "inversedBy": "likes"
+    },
+    "experience": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::experience.experience",
+      "inversedBy": "likes"
     }
   }
 }

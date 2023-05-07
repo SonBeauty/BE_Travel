@@ -29,17 +29,17 @@
         "audios"
       ]
     },
-    "users_permissions_user": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "journeys"
-    },
     "likes": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::like.like",
       "mappedBy": "journey"
+    },
+    "traveler": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::traveler.traveler",
+      "inversedBy": "journeys"
     }
   }
 }

@@ -32,11 +32,6 @@
         "audios"
       ]
     },
-    "availabletime": {
-      "type": "component",
-      "repeatable": false,
-      "component": "day.available-time"
-    },
     "city": {
       "type": "string"
     },
@@ -70,6 +65,18 @@
       "relation": "oneToMany",
       "target": "api::comment.comment",
       "mappedBy": "guide"
+    },
+    "experiences": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::experience.experience",
+      "mappedBy": "guide"
+    },
+    "availabletime_Day": {
+      "type": "string"
+    },
+    "availabletime_time": {
+      "type": "string"
     }
   }
 }

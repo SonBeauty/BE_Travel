@@ -27,6 +27,12 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user"
+    },
+    "journeys": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::journey.journey",
+      "mappedBy": "traveler"
     }
   }
 }
