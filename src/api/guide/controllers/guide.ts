@@ -68,7 +68,7 @@ export default factories.createCoreController(
         data: {
           refId: result.id,
           ref: "api::guide.guide",
-          field: "card",
+          field: "license",
         },
         files: fileLicense,
       });
