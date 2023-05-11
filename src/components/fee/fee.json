@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_fee_fees",
+  "info": {
+    "displayName": "fee"
+  },
+  "options": {},
+  "attributes": {
+    "number_of_traveler": {
+      "type": "string"
+    },
+    "fee": {
+      "type": "string"
+    }
+  }
+}
