@@ -35,6 +35,12 @@
       "relation": "manyToOne",
       "target": "api::experience.experience",
       "inversedBy": "likes"
+    },
+    "guide": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::guide.guide",
+      "inversedBy": "liked"
     }
   }
 }

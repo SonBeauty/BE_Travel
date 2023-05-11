@@ -26,9 +26,6 @@
         "audios"
       ]
     },
-    "Date": {
-      "type": "date"
-    },
     "time": {
       "type": "string"
     },
@@ -41,15 +38,13 @@
     "fee": {
       "type": "string"
     },
-    "attractions": {
-      "type": "component",
-      "repeatable": false,
-      "component": "attractions.attractions"
-    },
     "guide": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::guide.guide"
+    },
+    "Date": {
+      "type": "string"
     }
   }
 }

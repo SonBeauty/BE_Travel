@@ -29,11 +29,6 @@
         "audios"
       ]
     },
-    "Author": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "plugin::users-permissions.user"
-    },
     "comments": {
       "type": "relation",
       "relation": "oneToMany",
@@ -45,6 +40,12 @@
       "relation": "manyToMany",
       "target": "api::like.like",
       "mappedBy": "blogs"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "blogs"
     }
   }
 }

@@ -72,11 +72,14 @@
       "target": "api::experience.experience",
       "mappedBy": "guide"
     },
-    "availabletime_Day": {
+    "availabletime": {
       "type": "string"
     },
-    "availabletime_time": {
-      "type": "string"
+    "liked": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::like.like",
+      "mappedBy": "guide"
     }
   }
 }
