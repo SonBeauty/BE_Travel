@@ -81,11 +81,8 @@
       "target": "api::like.like",
       "mappedBy": "guide"
     },
-    "traveler": {
-      "displayName": "fee",
-      "type": "component",
-      "repeatable": true,
-      "component": "fee.fee"
+    "fee": {
+      "type": "string"
     }
   }
 }
