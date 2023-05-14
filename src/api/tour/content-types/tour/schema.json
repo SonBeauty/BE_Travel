@@ -28,9 +28,13 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images", "files", "videos", "audios"]
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
-
     "Schedule": {
       "displayName": "Schedule",
       "type": "component",
@@ -39,6 +43,15 @@
     },
     "slug": {
       "type": "string"
+    },
+    "travelers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::traveler.traveler",
+      "inversedBy": "tours"
+    },
+    "fee": {
+      "type": "integer"
     }
   }
 }

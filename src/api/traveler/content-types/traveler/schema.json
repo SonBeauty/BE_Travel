@@ -33,6 +33,12 @@
       "relation": "oneToMany",
       "target": "api::journey.journey",
       "mappedBy": "traveler"
+    },
+    "tours": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tour.tour",
+      "mappedBy": "travelers"
     }
   }
 }
