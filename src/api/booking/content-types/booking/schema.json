@@ -26,11 +26,11 @@
     "fee": {
       "type": "integer"
     },
-    "travelers": {
+    "traveler": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToOne",
       "target": "api::traveler.traveler",
-      "inversedBy": "bookings"
+      "inversedBy": "booking"
     }
   }
 }

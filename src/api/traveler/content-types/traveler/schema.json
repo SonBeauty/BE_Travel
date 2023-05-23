@@ -40,11 +40,11 @@
       "target": "api::tour.tour",
       "mappedBy": "travelers"
     },
-    "bookings": {
+    "booking": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToOne",
       "target": "api::booking.booking",
-      "inversedBy": "travelers"
+      "mappedBy": "traveler"
     }
   }
 }
