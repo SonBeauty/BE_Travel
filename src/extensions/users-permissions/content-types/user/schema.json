@@ -146,12 +146,6 @@
       "relation": "oneToMany",
       "target": "api::blog.blog",
       "mappedBy": "author"
-    },
-    "booking": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::booking.booking",
-      "inversedBy": "users_permissions_users"
     }
   }
 }
