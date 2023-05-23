@@ -27,7 +27,10 @@
       "type": "integer"
     },
     "travelers": {
-      "type": "integer"
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::traveler.traveler",
+      "inversedBy": "bookings"
     }
   }
 }
